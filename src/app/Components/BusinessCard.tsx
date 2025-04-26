@@ -1,20 +1,16 @@
 'use client';
 import { useState } from 'react';
 import { FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa';
-import { useSpring} from '@react-spring/web';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 
 const Card = () => {
   const [flipped, setFlipped] = useState(false);
-  const [darkMode, setDarkMode] = useState(false); // 🔥 Dark Mode State
+  const [darkMode, setDarkMode] = useState(false); 
   const router = useRouter();
 
-  const { transform } = useSpring({
-    transform: `rotateY(${flipped ? 180 : 0}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  });
+  
 
   const containerStyle = {
     perspective: '1000px',
@@ -25,7 +21,7 @@ const Card = () => {
     color: darkMode ? '#ffffff' : '#000000',            
     borderRadius: '0.5rem',
     boxShadow: '0 4px 6px rgba(0,0,0,0.5)',
-    position: 'relative' as 'relative',
+    position: 'relative',
     overflow: 'hidden',
     transition: 'background-color 0.5s, color 0.5s',
   };
