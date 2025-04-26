@@ -10,22 +10,6 @@ const Card = () => {
   const [darkMode, setDarkMode] = useState(false); 
   const router = useRouter();
 
-  
-
-  const containerStyle = {
-    perspective: '1000px',
-    width: '20rem',
-    height: '24rem',
-    margin: '7rem auto',
-    backgroundColor: darkMode ? '#111827' : '#ffffff', 
-    color: darkMode ? '#ffffff' : '#000000',            
-    borderRadius: '0.5rem',
-    boxShadow: '0 4px 6px rgba(0,0,0,0.5)',
-    position: 'relative',
-    overflow: 'hidden',
-    transition: 'background-color 0.5s, color 0.5s',
-  };
-
   return (
     <>
       <button
@@ -46,7 +30,20 @@ const Card = () => {
         {darkMode ? 'Light Mode' : 'Dark Mode'}
       </button>
 
-      <div style={containerStyle}>
+      <div style={
+      {
+    perspective: '1000px',
+    width: '20rem',
+    height: '24rem',
+    margin: '7rem auto',
+    backgroundColor: darkMode ? '#111827' : '#ffffff', 
+    color: darkMode ? '#ffffff' : '#000000',            
+    borderRadius: '0.5rem',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.5)',
+    position: 'relative',
+    overflow: 'hidden',
+    transition: 'background-color 0.5s, color 0.5s',
+  }}>
         <motion.div
            style={{
             width: '100%',
